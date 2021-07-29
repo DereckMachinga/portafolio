@@ -11,8 +11,9 @@ return (
                     <Link to={'./presentacion'} className="logo">Dereck</Link>
                 </div>
                     <Menu/>
+                    <i class="uil uil-times-circle nav-close"></i>
                     <div className="nav_icons">
-                        <ion-icon name="grid-outline"></ion-icon>
+                        <i class="uil uil-apps nav-open"></i>
                     </div>
         </header>
         <Switch>
