@@ -30,7 +30,7 @@ const Presentation = () => {
                     <h2>Hi, I'm Dereck</h2>
                     <h3>Full Stack Developer</h3>
                     <p className="presentation-p">High level experience in web design and back-end development</p>
-                    <a href="https://wa.link/0rtp5h" target="_blank" rel="noreferrer"  className="btn btn-01 contact">Contact me  <i className="uil uil-message uil-message-contact"></i></a>
+                    <a href="https://wa.link/0rtp5h" target="_blank" rel="noreferrer"  className="btn btn-01 font-1">Contact me  <i className="uil uil-message uil-message-contact"></i></a>
                 </div>
 
             </div>

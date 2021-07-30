@@ -4,12 +4,12 @@ import Skill from './Skill';
 const Skills = () => {
     return (  
         <div className="section">
-            <h2 className="skills-title">Skills</h2>
-            <span className="skills-subtitle">My Personal skills</span>
+            <h2 className="skills-title title">Skills</h2>
+            <span className="skills-subtitle subtitle">My Personal skills</span>
             <div className="flex skills">
                     <Skill
                         icon="uil uil-brackets-curly"
-                        name="Fronted"
+                        name="Frontend"
                         description="More than 4 years"
                         s1 = "html"
                         pc1 = "80%"

@@ -4,8 +4,8 @@ import CV from '../cv/CV_SANDOVAL_2021.pdf';
 const About = () => {
     return ( 
         <div className="section">
-            <h2 className="about-title">About Me</h2>
-            <span className="about-subtitle">My introduction</span>
+            <h2 className="title">About Me</h2>
+            <span className="subtitle">My introduction</span>
             <div className="flex container">
                 <div className="about-img">
                     <img src={Perfil} alt="Imagen about" />
