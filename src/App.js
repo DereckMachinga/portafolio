@@ -4,15 +4,18 @@ import Presentation from './components/Presentation';
 import About from './components/About';
 import Skills from './components/Skill/Skills';
 import Contact from './components/Contact';
+import PortfolioState from './context/portfolioState';
 function App() {
   return (
-    <Fragment>
-        <Header/>
-        <Presentation/>
-        <About/>
-        <Skills/>
-        <Contact/>
-    </Fragment>
+    <PortfolioState>
+      <Fragment>
+          <Header/>
+          <Presentation/>
+          <About/>
+          <Skills/>
+          <Contact/>
+      </Fragment>
+    </PortfolioState>
   );
 }
 

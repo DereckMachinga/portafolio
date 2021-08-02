@@ -53,7 +53,6 @@ ul { list-style: none;}
 .nav-menu-item { margin-right: 2rem; margin-left: 2rem; font-size: 1.5rem;}
 li a { color: var(--color-secundario); }
 .nav-link { width:20px; height: 20px;}
-li a:hover { color: var(--color-primario); background-color: var(--color-secundario); padding: 1rem; border-radius: 10px;}
 @media screen and (min-width: 768px){
   .nav { top: 0; border-top-left-radius: 0; border-top-right-radius: 0;box-shadow: 1px 4px 10px rgba(0, 0, 0, 0.2); margin-bottom: 4rem;}
   .nav-menu-list { display: flex; justify-content: space-between;}
@@ -73,6 +72,24 @@ li a:hover { color: var(--color-primario); background-color: var(--color-secunda
   .nav-link {display: flex; flex-direction: column; align-items: center;}
 }
 .nav-menu { display: none;}
+.nav-menu-mobile {    position: fixed;
+  left: 0;
+  width: calc(100% - 3rem);
+  background-color: var(--blanco);
+  padding: 3rem 1.5rem 8rem;
+  box-shadow: 1px -4px 10px rgb(0 0 0 / 20%);
+  transition: 1s ease-in-out;
+  border-top-left-radius: 18px;
+  border-top-right-radius: 18px;
+  bottom: 0;}
+.nav-menu-list-mobile {    display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 4rem;
+  gap: 4rem;
+  padding-left: 2rem;}
+.nav-menu-item-mobile {margin-right: 2rem;
+  margin-left: 2rem;
+  font-size: 1.5rem;}
 /*Presentacion*/
 .container {display: grid; grid-template-columns: 2fr 3fr ;align-items: center; padding: 2rem;}
 .presentation-blob { fill: var(--color-primario);width: 250px;}
@@ -146,7 +163,8 @@ a ion-icon { font-size: 2.5rem!important;}
 .contact {width: 100%;margin-top: 1rem; font-size: 1.5rem; display: flex; flex-direction: row; align-items: center;}
 .form-contact { padding:4rem;}
 .contact-section {width: 50%; display: none}
-
+.contact-section-info { display: flex; flex-direction: column; justify-content: center; align-items: center;}
+.form-two { display: flex; flex-direction: row; justify-content: space-between;}
 
 
 
