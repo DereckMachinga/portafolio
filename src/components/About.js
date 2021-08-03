@@ -3,10 +3,14 @@ import Perfil from '../img/about.jpg';
 import CV from '../cv/CV_SANDOVAL_2021.pdf';
 const About = () => {
     return ( 
-        <div className="section">
-            <h2 className="title">About Me</h2>
-            <span className="subtitle">My introduction</span>
-            <div className="flex container">
+        <section className="section about">
+            <div className="about-infor">
+                <div className="about-infor-data">
+                    <h2 className="title">About Me</h2>
+                    <span className="subtitle">My introduction</span>
+                </div>
+            </div>
+            <div className="flex container about">
                 <div className="about-img">
                     <img src={Perfil} alt="Imagen about" />
                 </div>
@@ -36,7 +40,7 @@ const About = () => {
                 </div>
                 
             </div>
-        </div>
+        </section>
     );
 }
 

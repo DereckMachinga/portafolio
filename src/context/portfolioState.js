@@ -3,13 +3,18 @@ import { props } from 'bluebird';
 import portfolioReducer from './portfolioReducer';
 import portfolioContext from './portfolioContext';
 
-import { MENU_MOBILE, MENU_MOBILE_CLOSE} from '../types';
+import { MENU_MOBILE, 
+    MENU_MOBILE_CLOSE,
+    DARK_MODE,
+    LIGHT_MODE
+} from '../types';
 
 
 const PortfolioState = props => {
     //State inicial
     const initialState = {
-        menu: false
+        menu: false,
+        mode: "light"
     }
     //dispatch pra ejecutar acciones 
     const [state, dispatch] = useReducer(portfolioReducer, initialState);
@@ -25,13 +30,25 @@ const PortfolioState = props => {
             type: MENU_MOBILE_CLOSE
         })
     }
-
+    const darkMode = () => {
+        dispatch({
+            type: DARK_MODE
+        })
+    }
+    const lightMode = () => {
+        dispatch({
+            type: LIGHT_MODE
+        })
+    }
     return(
         <portfolioContext.Provider
             value={{ 
                 menu: state.menu,
+                mode: state.mode,
                 mostrarMenu,
-                ocultarMenu
+                ocultarMenu,
+                darkMode,
+                lightMode
             }}
         >
             {props.children}

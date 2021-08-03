@@ -1,4 +1,8 @@
-import {MENU_MOBILE, MENU_MOBILE_CLOSE} from '../types';
+import {MENU_MOBILE,
+    MENU_MOBILE_CLOSE,
+    DARK_MODE,
+    LIGHT_MODE
+} from '../types';
 
 export default(state, action) => {
     switch (action.type) {
@@ -11,6 +15,16 @@ export default(state, action) => {
             return {
                 ...state,
                 menu: false
+            }
+        case DARK_MODE:
+            return {
+                ...state,
+                mode: "dark"
+            }
+        case LIGHT_MODE:
+            return {
+                ...state,
+                mode: "light"
             }
     }
 

@@ -10,6 +10,7 @@
   --blanco: #fff;
   --gris: #e1e1e1;
   --text-color: #6a777c;
+  --dark: #18191a;
 }
 html {
   box-sizing: border-box;
@@ -22,6 +23,7 @@ body {
   font-family: 'Poppins', sans-serif;
   min-height: 100%;
 }
+.dark { background-color: var(--dark);}
 img {width: 100px; height: 100px;}
 h1{font-weight: 400;}
 a {text-decoration:none; text-align: center;}
@@ -32,11 +34,11 @@ h4 { font-size: 1.5rem; font-weight: 400;}
 p { font-size: 1.5rem; color: var(--text-color)}
 label {display: block; margin-bottom: 1.5rem;}
 form { border: 1px solid #000; padding: 2rem; margin-bottom: 4rem; border-radius: 1rem;}
-input,textarea {border: none; width: calc(100% - 1rem);padding: 0.5rem; border-radius: 1.8rem; background-color: var(--gris); outline: none; margin-bottom: 1rem;}
+input,textarea {border: none; width: calc(100% - 1rem);padding-top: 1rem; padding-bottom: 1rem; padding-left: .5rem;padding-right: 0.5rem; ;border-radius: 1.8rem; background-color: var(--gris); outline: none; margin-bottom: 1rem;}
 /*NAV*/
 .logo { font-size: 2rem; color:rgba(0, 0, 0, 0.5)}
 .logo:hover {color: var(--color-primario);}
-.nav {display: flex; justify-content:space-between; position: fixed; bottom: 0; align-items: center;box-shadow: 1px -4px 10px rgba(0, 0, 0, 0.2); width: 100%; height: 90px; border-top-left-radius: 18px; border-top-right-radius: 18px; background-color: var(--blanco)}
+.nav {display: flex; justify-content:space-between; z-index: 1;position: fixed; bottom: 0; align-items: center;box-shadow: 1px -4px 10px rgba(0, 0, 0, 0.2); width: 100%; height: 90px; border-top-left-radius: 18px; border-top-right-radius: 18px; background-color: var(--blanco)}
 .nav_logo { margin-left: 20px;}
 .nav-icon { font-size: 1.8rem}
 .nav_icons {justify-content:center; padding: 2rem;}
@@ -81,7 +83,8 @@ li a { color: var(--color-secundario); }
   transition: 1s ease-in-out;
   border-top-left-radius: 18px;
   border-top-right-radius: 18px;
-  bottom: 0;}
+  bottom: 0;
+}
 .nav-menu-list-mobile {    display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-gap: 4rem;
@@ -90,6 +93,7 @@ li a { color: var(--color-secundario); }
 .nav-menu-item-mobile {margin-right: 2rem;
   margin-left: 2rem;
   font-size: 1.5rem;}
+.mode {font-size: 2rem; cursor: pointer}
 /*Presentacion*/
 .container {display: grid; grid-template-columns: 2fr 3fr ;align-items: center; padding: 2rem;}
 .presentation-blob { fill: var(--color-primario);width: 250px;}
@@ -107,10 +111,15 @@ a ion-icon { font-size: 2.5rem!important;}
   .presentation-img { align-items: center;}
   .presentation-blob { width:300px;}
   .section { margin-top: 10rem;}
+  .about-img { width: 80%!important; height: 100%!important;}
+  .container.about {margin: 0;}
+  .about-infor {    display: flex;justify-content: flex-end;align-items: center;flex-direction: row;width: 100%;}
+  .about-infor-data {margin-right: 45rem;}
 }
 @media screen and (max-width: 768px) {
   .presentation-img { margin-right: 4.5rem;}
   .contact{flex-direction: column!important;}
+
 }
 /*Btn*/
 .btn { padding: 1.5rem; margin-top: 5rem; border: none; display: inline-block;border-radius: 10px; color: var(--blanco); margin-bottom: 5rem;}
@@ -133,6 +142,7 @@ a ion-icon { font-size: 2.5rem!important;}
 .about-info .about-info-dt  p {font-size: 1.5rem; margin-top: 1rem;}
 .about-btn { width:100%; align-items: center; display: flex; justify-content: center;}
 .about-btn a,.about-btn a i { font-size: 1.3rem;}
+.section.about .title { right: 0; }
 
 /*Skilss*/
 .skills { margin-bottom: 5rem;}
@@ -158,17 +168,19 @@ a ion-icon { font-size: 2.5rem!important;}
   .skills-content.one { margin: auto;}
   .contact-section {display: initial!important;}
 }
+/*Sections*/
+.section.about { background-color: #e1e1e1;}
 
 /*Contact*/
 .contact {width: 100%;margin-top: 1rem; font-size: 1.5rem; display: flex; flex-direction: row; align-items: center;}
 .form-contact { padding:4rem;}
-.contact-section {width: 50%; display: none}
+.contact-section {width: 50%; display: none;padding: 4rem;}
 .contact-section-info { display: flex; flex-direction: column; justify-content: center; align-items: center;}
 .form-two { display: flex; flex-direction: row; justify-content: space-between;}
-
-
-
-
+form {box-shadow: 1px 4px 10px rgba(0, 0, 0, 0.5);border: none;}
+#apellido { margin-left: 1rem;}
+#nombre {margin-right: 1rem;}
+.contact-section-info img { width: 80%; height:100%;}
 
 
 
