@@ -4,7 +4,7 @@ import Imagen1 from '../img/about.jpg';
 
 export default function CarouselComponent() {
         const clickItem = () => {
-            console.log('click en la imagen');
+            alert('click en la imagen');
         }
     return (
         <Fragment>

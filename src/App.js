@@ -1,18 +1,17 @@
 import React from 'react';
-import {BrowserRouter as Router, Switch, Route} from 'react-router-dom';
+import {BrowserRouter as Router, Switch, Route, Redirect} from 'react-router-dom';
 import PortfolioState from './context/portfolioState';
 import Page from './components/Page';
-
+import SendMail from './components/Contact/SendMail';
 function App() {
   return (
     <PortfolioState>
-      <Page></Page>
       {/* {mode === 'light' ? <h2>Tema claro</h2> : <h2>Tema oscuro</h2>} */}
             {/* <Header/>
             <Presentation/>
             <About/>
             <Skills/>
-            <Contact/> */}
+          <Contact/> */}
     {
       window.scroll({
         top: 2500, 
@@ -21,8 +20,12 @@ function App() {
       })
     }
     <Router>
+        <Page></Page>
         <Switch>
             <Route path="./" component={Page}/>
+            <Route path="/SendMail">
+              <Redirect to={'/SendMail'} component={SendMail}></Redirect>
+            </Route>
         </Switch>
     </Router> 
     </PortfolioState>
