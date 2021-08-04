@@ -1,21 +1,23 @@
-import React,{Fragment, useContext, useState} from 'react';
-import {BrowserRouter as Router, Switch, Route,Link} from 'react-router-dom';
+import React,{Fragment, useContext} from 'react';
+import {Link, animateScroll as scroll} from 'react-scroll';
 import Menu from './Menu/Menu';
 import MenuMobile from './Menu/MenuMobile';
-import About from './About';
-import Presentation from './Presentation';
 import portfolioContext from '../context/portfolioContext';
 const Header = () => {
     //Obtener el state del menu mobile
     const portfoliosContext = useContext(portfolioContext);
     //Extraer el menu mobile del context
     const {menu, mostrarMenu, ocultarMenu} = portfoliosContext;
-
+    const scrollToTop = () => {
+        scroll.scrollToTop();
+    };
 return ( 
-    <Router>
+
         <header className="nav">
                 <div className="nav_logo">
-                    <Link to={'./presentacion'} className="logo">Dereck</Link>
+                    <Link to="presentation" smooth={true} offset={-100} duration={300} className="logo"
+                        onClick= {() => scrollToTop }
+                    >Dereck</Link>
                 </div>
                 {menu ?
                     (
@@ -37,11 +39,7 @@ return (
                         <i className="uil uil-apps nav-open"></i>
                     </div>
         </header>
-        <Switch>
-            <Route path="./presentacion" component={Presentation}></Route>
-            <Route path="./sobre" component={About}></Route>
-        </Switch>
-    </Router>
+        
     );
 }
 

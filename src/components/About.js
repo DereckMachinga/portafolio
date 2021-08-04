@@ -1,15 +1,11 @@
-import React from 'react';
+import React, {Fragment} from 'react';
 import Perfil from '../img/about.jpg';
 import CV from '../cv/CV_SANDOVAL_2021.pdf';
 const About = () => {
     return ( 
-        <section className="section about">
-            <div className="about-infor">
-                <div className="about-infor-data">
-                    <h2 className="title">About Me</h2>
-                    <span className="subtitle">My introduction</span>
-                </div>
-            </div>
+        <section className="section about" id="about">
+                <h2 className="title">About Me</h2>
+                <span className="subtitle">My introduction</span>
             <div className="flex container about">
                 <div className="about-img">
                     <img src={Perfil} alt="Imagen about" />
@@ -41,6 +37,7 @@ const About = () => {
                 
             </div>
         </section>
+      
     );
 }
 
