@@ -23,9 +23,6 @@ function App() {
         <Page></Page>
         <Switch>
             <Route path="./" component={Page}/>
-            <Route path="/SendMail">
-              <Redirect to={'/SendMail'} component={SendMail}></Redirect>
-            </Route>
         </Switch>
     </Router> 
     </PortfolioState>

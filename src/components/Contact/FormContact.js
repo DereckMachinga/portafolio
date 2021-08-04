@@ -21,8 +21,6 @@ const FormContact = () => {
         }else{
             emailjs.sendForm('service_g36ry7h','template_ifvvnqm',e.target,'user_ryVSOFK8p0n18EeDwrUth').then((result)=>{
                 console.log(result.text);
-                // withRouter.browserHistory.push('/SendMail');
-                return (<Redirect to='/SendMail'/>);
             },(error) => {
                 console.log(error.text);
             });
