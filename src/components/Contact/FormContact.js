@@ -19,14 +19,14 @@ const FormContact = () => {
         if(nombre === '' || apellido === '' || email === '') {
             return alert("Todo los campos son obligatorio")
         }else{
-            // emailjs.sendForm('service_g36ry7h','template_ifvvnqm',e.target,'user_ryVSOFK8p0n18EeDwrUth').then((result)=>{
-            //     console.log(result.text);
-            //     // withRouter.browserHistory.push('/SendMail');
-            //     return (<Redirect to='/SendMail'/>);
-            // },(error) => {
-            //     console.log(error.text);
-            // });
-            // e.target.reset();
+            emailjs.sendForm('service_g36ry7h','template_ifvvnqm',e.target,'user_ryVSOFK8p0n18EeDwrUth').then((result)=>{
+                console.log(result.text);
+                // withRouter.browserHistory.push('/SendMail');
+                return (<Redirect to='/SendMail'/>);
+            },(error) => {
+                console.log(error.text);
+            });
+            e.target.reset();
             console.log(nombre);
         }
         
