@@ -1,11 +1,11 @@
 import React, {useContext,Fragment} from 'react';
 import portfolioContext from '../../context/portfolioContext';
-const Skill = ({key,icon,name, description, s1, pc1, s2, pc2,ps}) => {
+const Skill = ({icon,name, description, s1, pc1, s2, pc2,ps, id}) => {
     const portfoliosContext = useContext(portfolioContext);
     const {skills, SkillActual, ocultarSkills} = portfoliosContext;
     const accionesSkill = () => {
-        SkillActual(key);
-        ocultarSkills(key);
+        SkillActual(id);
+        ocultarSkills(id);
     }
     return ( 
         <div className={`skills-content ${ps}`}>

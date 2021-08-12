@@ -6,7 +6,6 @@ const Skills = () => {
     const {skillitem, obtenerSkill} = portfoliosContext;
     useEffect(() => {
         obtenerSkill();
-        console.log(skillitem);
     },[])
     if(!skillitem) return <h2>No hay ninguna skills</h2>;
     return (  
@@ -16,7 +15,7 @@ const Skills = () => {
             <div className="flex skills">
                     {skillitem.map(skillitem => (
                         <Skill
-                            key = {skillitem.key}
+                            id = {skillitem.id}
                             icon={skillitem.icon}
                             name={skillitem.name}
                             description={skillitem.description}

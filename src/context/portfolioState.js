@@ -16,17 +16,17 @@ import { MENU_MOBILE,
 
 const PortfolioState = props => {
     const skillitem= [
-        {key: "1",icon:"uil uil-brackets-curly", name: "Frontend", description: "More than 4 years", s1: "html", pc1: "80%", s2: "css", pc2: "70%", ps: "one"},
-        {key: "2",icon:"uil uil-server-network", name: "Backend", description: "More than 2 years", s1: "JavaScript", pc1: "80%", s2: "Php", pc2: "70%", ps: "three"},
-        {key: "3",icon:"uil uil-chart-growth", name: "Designer", description: "More than 4 years", s1: "figma", pc1: "50%", s2: "Photoshop", pc2: "70%", ps: "one"}
+        {id: "1",icon:"uil uil-brackets-curly", name: "Frontend", description: "More than 4 years", s1: "html", pc1: "80%", s2: "css", pc2: "70%", ps: "one"},
+        {id: "2",icon:"uil uil-server-network", name: "Backend", description: "More than 2 years", s1: "JavaScript", pc1: "80%", s2: "Php", pc2: "70%", ps: "three"},
+        {id: "3",icon:"uil uil-chart-growth", name: "Designer", description: "More than 4 years", s1: "figma", pc1: "50%", s2: "Photoshop", pc2: "70%", ps: "one"}
     ]
     //State inicial
     const initialState = {
         menu: false,
         skillitem: [
-            {key: "1",icon:"uil uil-brackets-curly", name: "Frontend", description: "More than 4 years", s1: "html", pc1: "80%", s2: "css", pc2: "70%", ps: "one"},
-            {key: "2",icon:"uil uil-server-network", name: "Backend", description: "More than 2 years", s1: "JavaScript", pc1: "80%", s2: "Php", pc2: "70%", ps: "three"},
-            {key: "3",icon:"uil uil-chart-growth", name: "Designer", description: "More than 4 years", s1: "figma", pc1: "50%", s2: "Photoshop", pc2: "70%", ps: "one"}
+            {id: "1",icon:"uil uil-brackets-curly", name: "Frontend", description: "More than 4 years", s1: "html", pc1: "80%", s2: "css", pc2: "70%", ps: "one"},
+            {id: "2",icon:"uil uil-server-network", name: "Backend", description: "More than 2 years", s1: "JavaScript", pc1: "80%", s2: "Php", pc2: "70%", ps: "three"},
+            {id: "3",icon:"uil uil-chart-growth", name: "Designer", description: "More than 4 years", s1: "figma", pc1: "50%", s2: "Photoshop", pc2: "70%", ps: "one"}
         ],
         mode: "light",
         skills: true,

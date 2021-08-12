@@ -216,12 +216,12 @@ form {box-shadow: 1px 4px 10px var(--sombra);border: none;}
   align-items: center;}
   .carousel.carousel-slider {width: 250px!important;}
   .carousel{ width: initial!important;}
-
+/* .img-source {width: 250px; height:250px;}  */
 /*Portfolio*/
 .portfolio {margin-bottom: 2rem;}
 .carousel-wrapper {margin-bottom: 5rem;}
-
-
+/*Error*/
+.error {text-align: center; color: #F71D1D}
 /*Modal*/
 .modal {
   font-size: 12px;
