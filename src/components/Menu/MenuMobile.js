@@ -1,4 +1,4 @@
-import React, {useContext, Fragment} from 'react';
+import React, {useContext, Fragment, useState, useEffect} from 'react';
 import {Link, animateScroll as scroll} from 'react-scroll';
 import portfolioContext from '../../context/portfolioContext';
 const MenuMobile = () => {
@@ -6,6 +6,23 @@ const MenuMobile = () => {
     const portfoliosContext = useContext(portfolioContext);
     //extraer valores del contexto
     const {mode,menu, darkMode, lightMode, ocultarMenu} = portfoliosContext;
+    const [cheked, setcheked] = useState(localStorage.getItem("theme") === "dark" ? true : false);
+
+    useEffect(() => {
+        document.getElementsByTagName("HTMl")[0].setAttribute("data-theme", localStorage.getItem("theme"));
+    },[cheked]);
+    const toggleThemeChange  =() => {
+        if(cheked === false){
+            localStorage.setItem("theme", "dark");
+            lightMode();
+            setcheked(true);
+        }
+        else{
+            localStorage.setItem("theme","light");
+            darkMode();
+            setcheked(false);
+        }
+    }
     return ( 
         <Fragment>
 
@@ -31,7 +48,7 @@ const MenuMobile = () => {
                                         {mode  === 'light' ? 
                                             (
                                                 <li className="nav-menu-item-mobile"
-                                                    onClick= {() => darkMode()}
+                                                    onClick= {() => toggleThemeChange()}
                                                 >
                                                     <i className="uil uil-moon mode"></i>
                                                 </li>
@@ -39,7 +56,7 @@ const MenuMobile = () => {
                                             : 
                                             (
                                                 <li className="nav-menu-item-mobile"
-                                                    onClick= {() =>lightMode()}
+                                                    onClick= {() =>toggleThemeChange()}
                                                 >
                                                     <i className="uil uil-sun mode"></i>
                                                 </li>

@@ -1,6 +1,8 @@
 import React,{useState} from 'react';
 import emailjs from 'emailjs-com';
 import { withRouter } from 'react-router';
+import Popup from 'reactjs-popup';
+import EnvioCorreo from '../../img/undraw_Mail_sent_re_0ofv.svg';
 const FormContact = () => {
     const [correo, guardarCorreo] = useState({
         nombre: '',
@@ -16,7 +18,7 @@ const FormContact = () => {
     }
     function sendEmail(e) {
         e.preventDefault();
-        if(nombre === '' || apellido === '' || email === '') {
+        if(nombre.length === 0 || apellido.length === 0 || email.length === 0) {
             return alert("Todo los campos son obligatorio")
         }else{
             emailjs.sendForm('service_g36ry7h','template_ifvvnqm',e.target,'user_ryVSOFK8p0n18EeDwrUth').then((result)=>{
@@ -47,7 +49,30 @@ const FormContact = () => {
                             onChange={onChangeCorreo}
                         />
                         <textarea name="Message" name="mensaje" cols="30" rows="10" placeholder="Your Message"></textarea>
-                        <input type="submit" value="Send" className="btn btn-01 btn-contact" />
+
+                        <Popup 
+                            trigger={
+                                <button className="btn btn-01 btn-contact">Enviar <i className="uil uil-message uil-message-contact"></i></button>
+                            }
+                            modal nested
+                        >
+                            {close => (
+                                <div>
+                                    <div className="modal">
+                                        <button className="close" onClick={close}>
+                                        &times;
+                                        </button>
+                                        <div className="content">
+                                        {' '}
+                                            <img src={EnvioCorreo} alt="" />
+                                            <div className="actions">
+                                                <span>El correo a sido enviado con exito</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                    )}
+                        </Popup>
                     </form>
                         {/* <a href="#!" className="btn btn-01 btn-contact">Enviar <i className="uil uil-message uil-message-contact"></i></a> */}
                 </div>

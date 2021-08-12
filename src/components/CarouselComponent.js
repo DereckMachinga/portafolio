@@ -25,6 +25,26 @@ export default function CarouselComponent() {
                     <div>
                         <img className="img-carousel" src={Imagen1} />
                     </div>
+                    <div>
+                        <img className="img-carousel" src={Imagen1} />
+                    </div>
+                    <div>
+                        <img className="img-carousel" src={Imagen1} />
+                    </div>
+                    <div>
+                        <img className="img-carousel" src={Imagen1} />
+                    </div>
+                    <div>
+                        <img className="img-carousel" src={Imagen1} />
+                    </div>
+                    <div>
+                        <img className="img-carousel" src={Imagen1} />
+                    </div><div>
+                        <img className="img-carousel" src={Imagen1} />
+                    </div>
+                    <div>
+                        <img className="img-carousel" src={Imagen1} />
+                    </div>
                 </Carousel>
             </div>
         </Fragment>

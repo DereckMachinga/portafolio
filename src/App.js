@@ -2,7 +2,7 @@ import React from 'react';
 import {BrowserRouter as Router, Switch, Route, Redirect} from 'react-router-dom';
 import PortfolioState from './context/portfolioState';
 import Page from './components/Page';
-import SendMail from './components/Contact/SendMail';
+
 function App() {
   return (
     <PortfolioState>

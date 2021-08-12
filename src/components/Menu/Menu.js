@@ -1,4 +1,4 @@
-import React, {useContext} from 'react';
+import React, {useContext, useState, useEffect} from 'react';
 import {Link, animateScroll as scroll} from 'react-scroll';
 import portfolioContext from '../../context/portfolioContext';
 const Menu = () => {
@@ -6,6 +6,27 @@ const Menu = () => {
     const portfoliosContext = useContext(portfolioContext);
     //Extraer valores del contexto
     const {mode, darkMode, lightMode} = portfoliosContext;
+
+    const [cheked, setcheked] = useState(localStorage.getItem("theme") === "dark" ? true : false);
+
+    useEffect(() => {
+        document
+        .getElementsByTagName("HTML")[0]
+        .setAttribute("data-theme", localStorage.getItem("theme"));
+    },[cheked]);
+
+    const toggleThemeChange = () => {
+        if (cheked === false) {
+            localStorage.setItem("theme", "dark");
+            lightMode();
+            setcheked(true);
+        }
+        else {
+            localStorage.setItem("theme", "light");
+            setcheked(false);
+            darkMode();
+        }
+    }
     return ( 
         <div className="nav-menu">
                     <ul className="nav-menu-list">
@@ -17,13 +38,13 @@ const Menu = () => {
                         {mode === 'light' ?
                             (
                                 <li className="nav-menu-item"
-                                    onClick= {() => darkMode()}
+                                    onClick= {() => toggleThemeChange()}
                                 ><i className="uil uil-moon mode"></i></li>
                             )
                         :
                         (
                             <li className="nav-menu-item"
-                                onClick= {() => lightMode()}
+                                onClick= {() => toggleThemeChange()}
                             ><i className="uil uil-sun mode"></i></li>
                         )
                     }
