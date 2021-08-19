@@ -56,12 +56,12 @@ const FormContact = () => {
                             onChange={onChangeCorreo}
                         />
                         <textarea name="Message" name="mensaje" cols="30" rows="10" placeholder="Your Message"></textarea>
-                        { nombre.length === 0 || apellido.length === 0 || email.length === 0? 
+                        {/* { nombre.length === 0 || apellido.length === 0 || email.length === 0? 
                             (    
                                 <p className="error">Todos los campos son obligatorio</p>       
                             )
-                        : 
-                            (
+                        :  */}
+                            {/* ( */}
                                 
                                 <Popup 
                                     trigger={
@@ -84,11 +84,11 @@ const FormContact = () => {
                                                 </div>
                                             </div>
                                         </div>
-                            )}
+                                    )}
                                 </Popup>
                                 
                             )
-                    }
+                    {/* } */}
                     </form>
                         {/* <a href="#!" className="btn btn-01 btn-contact">Enviar <i className="uil uil-message uil-message-contact"></i></a> */}
                 </div>
